@@ -1,0 +1,65 @@
+Inicio del programa MinutosRestantes
+
+Declarar un objeto Scanner llamado "scanner" para leer la entrada del usuario
+
+Definir un arreglo "diasSemana" con los días de la semana ("lunes", "martes", "miércoles", "jueves", "viernes")
+Definir un arreglo "minutosHastaFinDeSemana" con la cantidad de minutos restantes hasta el fin de semana para cada día de la semana
+
+Declarar variables "diaSemana", "hora", y "minutos"
+
+Mientras sea verdadero (bucle infinito):
+    Mostrar "Ingrese un día de la semana (lunes a viernes):"
+    Leer "diaSemana" y convertirlo a minúsculas
+
+    Si "diaSemana" es válido (verificar con la función isValidDiaSemana):
+        Romper el bucle
+    Sino:
+        Mostrar "Día de la semana no válido. Por favor, ingrese un día válido."
+
+Mientras sea verdadero:
+    Mostrar "Ingrese la hora (0-23):"
+    Leer "hora"
+
+    Si "hora" es válido (0 a 23):
+        Romper el bucle
+    Sino:
+        Mostrar "Hora no válida. Por favor, ingrese una hora válida."
+
+Mientras sea verdadero:
+    Mostrar "Ingrese los minutos (0-59):"
+    Leer "minutos"
+
+    Si "minutos" es válido (0 a 59):
+        Romper el bucle
+    Sino:
+        Mostrar "Minutos no válidos. Por favor, ingrese minutos válidos."
+
+Calcular "minutosHastaFinSemana" llamando a la función calcularMinutosHastaFinSemana con los parámetros "diaSemana", "hora", "minutos", "diasSemana", "minutosHastaFinDeSemana"
+
+Mostrar "Faltan " + "minutosHastaFinSemana" + " minutos para el fin de semana."
+
+Función isValidDiaSemana(diaSemana):
+    Declarar un arreglo "diasValidos" con los días válidos ("lunes", "martes", "miércoles", "jueves", "viernes")
+
+    Para cada "diaValido" en "diasValidos":
+        Si "diaSemana" es igual a "diaValido":
+            Devolver verdadero
+
+    Devolver falso
+
+Función calcularMinutosHastaFinSemana(diaSemana, hora, minutos, diasSemana, minutosHastaFinDeSemana):
+    Declarar "minutosHastaFinSemana" y establecerlo en 0
+    Declarar "diaIndex" y establecerlo en -1
+
+    Para cada "i" desde 0 hasta la longitud de "diasSemana":
+        Si "diaSemana" es igual a "diasSemana[i]":
+            Establecer "diaIndex" en "i"
+            Romper el bucle
+
+    Si "diaIndex" es mayor o igual a 0:
+        Establecer "minutosHastaFinSemana" en "minutosHastaFinDeSemana[diaIndex]"
+        Sumar "hora * 60 + minutos" a "minutosHastaFinSemana"
+
+    Devolver "minutosHastaFinSemana"
+
+Fin del programa MinutosRestantes

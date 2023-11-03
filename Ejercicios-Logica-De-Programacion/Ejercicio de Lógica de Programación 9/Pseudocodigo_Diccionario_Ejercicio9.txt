@@ -1,0 +1,23 @@
+Inicio del programa Diccionario
+
+Declarar un HashMap "diccionario" para almacenar las traducciones
+Agregar pares clave-valor al "diccionario" para mapear palabras en español a palabras en inglés
+
+Inicializar un objeto Scanner llamado "scanner"
+
+Mientras sea verdadero (bucle infinito):
+    Mostrar "Ingrese una palabra en español (o 'salir' para terminar):"
+    Leer la entrada del usuario y almacenarla en "palabraEspañol"
+
+    Si "palabraEspañol" es igual a "salir":
+        Salir del bucle (terminar el programa)
+    Sino:
+        Obtener la traducción de "palabraEspañol" desde el "diccionario" y almacenarla en "traduccion"
+        Si "traduccion" no es nula:
+            Mostrar "Traducción al inglés: " seguido de "traduccion"
+        Sino:
+            Mostrar "La palabra no se encuentra en el diccionario."
+
+Cerrar el "scanner"
+
+Fin del programa Diccionario

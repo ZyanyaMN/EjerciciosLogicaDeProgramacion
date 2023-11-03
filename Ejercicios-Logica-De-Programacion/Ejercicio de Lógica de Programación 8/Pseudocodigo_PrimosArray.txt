@@ -1,0 +1,39 @@
+Inicio del programa PrimosArray
+
+Declarar una matriz de enteros "numeros" con 10 elementos
+
+Para cada "i" desde 0 hasta 9
+    Solicitar al usuario que ingrese un número y almacenarlo en "numeros[i]"
+
+Mostrar "Array original con sus índices:"
+Para cada "i" desde 0 hasta la longitud de "numeros"
+    Mostrar "i - numeros[i]"
+
+Declarar una matriz de enteros "primos" con 10 elementos
+Declarar una variable "noPrimosIndex" y establecerla en 0
+Declarar una variable "primosIndex" y establecerla en 0
+
+Para cada "i" desde 0 hasta la longitud de "numeros"
+    Si "numeros[i]" es primo
+        Asignar "numeros[i]" a "primos[primosIndex]"
+        Incrementar "primosIndex" en 1
+    Sino
+        Asignar "numeros[i]" a "numeros[noPrimosIndex]"
+        Incrementar "noPrimosIndex" en 1
+
+Mostrar "Array con los números primos en las primeras posiciones, mostrando la posición del array más el valor:"
+Para cada "i" desde 0 hasta "primosIndex"
+    Mostrar "i - primos[i]"
+Para cada "i" desde 0 hasta "noPrimosIndex"
+    Mostrar "i + primosIndex - numeros[i]"
+
+Fin del programa PrimosArray
+
+Función esPrimo(numero)
+    Si "numero" es menor o igual a 1
+        Devolver falso
+    Para cada "i" desde 2 hasta la raíz cuadrada de "numero"
+        Si "numero" módulo "i" es igual a 0
+            Devolver falso
+    Devolver verdadero
+Fin de la función esPrimo
